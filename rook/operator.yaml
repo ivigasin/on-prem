@@ -91,17 +91,18 @@ metadata:
 ---
 
 apiVersion: rbac.authorization.k8s.io/v1
+# This cluster role binding allows anyone in the "manager" group to read secrets in any namespace.
 kind: ClusterRoleBinding
 metadata:
   name: rook-operator
-  namespace: rook-system
+  namespace: rook-systeml
 subjects:
-  - kind: ServiceAccount
-    name: rook-operator
-    namespace: rook-system
+- kind: ServiceAccount
+  name: rook-operator
+  namespace: rook-system
 roleRef:
   kind: ClusterRole
-  name: rook-operator
+  name:  rook-operator
   apiGroup: rbac.authorization.k8s.io
   
 apiVersion: apps/v1
