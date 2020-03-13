@@ -97,9 +97,9 @@ metadata:
   name: rook-operator
   namespace: rook-systeml
 subjects:
-- kind: ServiceAccount
-  name: rook-operator
-  namespace: rook-system
+ - kind: ServiceAccount
+   name: rook-operator
+   namespace: rook-system
 roleRef:
   kind: ClusterRole
   name:  rook-operator
