@@ -9,7 +9,7 @@ metadata:
   name: rook-operator
 rules:
 - apiGroups: [""]
-  resources: 
+    resources: 
     - namespaces
     - serviceaccounts
     - secrets
